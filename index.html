@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Calculator app</title>
+  <link id='stylesheet' rel="stylesheet" href="./styles1.css">
+  <script src='./Scripts.js'></script>
+
+</head>
+<body onload="updateVariables()">
+<main>
+  <div class="calc">
+    <div class="menu">
+      <p class="title">calc</p> 
+      <div class="sliderparent">
+        <div class="slidertitle"><p>THEME</p></div>
+        <div class="sliderset">
+        <div class="sliderlabel">
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+        </div>
+        <input onClick='themeSwitch()' type="range" min="1" max="3" value="1" class="slider" id="Theme">
+      </div>
+      </div>
+    </div>
+    <div class="screen">
+      <div class="display">
+        <p id="displaytext">0</p>
+      </div>
+    </div>
+    <div class="keypad">
+      <section id="grid">
+        <div class="numkey">
+          <button id='1' onClick="charClick(this.id);updateVariables()">1</button>
+        </div>
+        <div class="numkey">
+          <button id='2' onClick="charClick(this.id);updateVariables()">2</button>
+        </div>
+        <div class="numkey">
+          <button id='3' onClick="charClick(this.id);updateVariables()">3</button>
+        </div>
+        <div class="numkey">
+          <button id='4' onClick="charClick(this.id);updateVariables()">4</button>
+        </div>
+        <div class="numkey">
+          <button id='5' onClick="charClick(this.id);updateVariables()">5</button>
+        </div>
+        <div class="numkey">
+          <button id='6' onClick="charClick(this.id);updateVariables()">6</button>
+        </div>
+        <div class="numkey">
+          <button id='7' onClick="charClick(this.id);updateVariables()">7</button>
+        </div>
+        <div class="numkey">
+          <button id='8' onClick="charClick(this.id);updateVariables()">8</button>
+        </div>
+        <div class="numkey">
+          <button id='9' onClick="charClick(this.id);updateVariables()">9</button>
+        </div>
+        <div class="numkey">
+          <button id='0' onClick="charClick(this.id);updateVariables()">0</button>
+        </div>
+        <div class="numkey">
+          <button id='.' onClick="charClick(this.id);updateVariables()">.</button>
+        </div>
+        <div class="numkey">
+          <button id='/' onClick="charClick(this.id);updateVariables()">/</button>
+        </div>
+        <div class="numkey">
+          <button id='*' onClick="charClick(this.id);updateVariables()">x</button>
+        </div>
+        <div class="numkey">
+          <button id='-' onClick="charClick(this.id);updateVariables()">-</button>
+        </div>
+        <div class="numkey">
+          <button id='+' onClick="charClick(this.id);updateVariables()">+</button>
+        </div>
+        <div class="bluekey">
+          <button id='RESET' onClick="reset();updateVariables()">RESET</button>
+        </div>
+        <div class="bluekey">
+          <button id='DEL' onClick="del();updateVariables()">DEL</button>
+        </div>
+        <div class="redkey">
+          <button id='=' onClick="sum();updateVariables()">=</button>
+        </div>
+      </section>
+    </div>
+</div>
+</main>
+</body>
+</html>
